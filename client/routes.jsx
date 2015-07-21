@@ -4,7 +4,7 @@ FlowRouter.route("/", {
 
     },
     action(params) {
-        renderMainLayoutWith(<C.Home />);
+        renderMainAppWith(<C.Home />);
     }
 });
 
@@ -14,12 +14,12 @@ FlowRouter.route("/login", {
 
     },
     action(params) {
-        renderMainLayoutWith(<C.UserLogin />);
+        renderMainAppWith(<C.UserLogin />);
     }
 });
 
-function renderMainLayoutWith(component) {
-    ReactLayout.render(C.MainLayout, {
+function renderMainAppWith(component) {
+    ReactLayout.render(C.MainApp, {
         header: <C.Header />,
         content: component,
         footer: <C.Footer />
