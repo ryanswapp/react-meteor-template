@@ -18,8 +18,8 @@ C.UserLogin = React.createClass({
 
         var self = this;
 
-        var email = React.findDOMNode(this.refs.email).value;
-        var password = React.findDOMNode(this.refs.password).value;
+        var email = $(event.target).find("[name=email]").val();
+        var password = $(event.target).find("[name=password]").val();
 
         var errors = {};
 
@@ -60,14 +60,8 @@ C.UserLogin = React.createClass({
 
                         <form onSubmit={this.onSubmit}>
                             <C.AuthErrors errors={this.state.errors} />
-                            <div className={!!this.state.errors.email ? 'form-group has-error' : 'form-group'}>
-                                <label for="email">Email</label>
-                                <input type="text" ref="email" className="form-control" />
-                            </div>
-                            <div className={!!this.state.errors.password ? 'form-group has-error' : 'form-group'}>
-                                <label for="password">Password</label>
-                                <input type="password" ref="password" className="form-control" />
-                            </div>
+                            <C.AuthFormInput hasError={!!this.state.errors.email} name="Email" type="text" label="Email" />
+                            <C.AuthFormInput hasError={!!this.state.errors.password} name="Password" type="password" label="Password" />
                             <input type="submit" className="btn btn-default"/>
                         </form>
                     </div>

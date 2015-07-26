@@ -17,5 +17,10 @@ fourseven:scss
 reywood:bootstrap3-sass
 http
 accounts-password
-sanjo:jasmine
-velocity:html-reporter
+
+## I have commented out the testing packages because I don't like them
+## to run while I'm developing. The more tests you add the slower your
+## app gets.
+
+# sanjo:jasmine
+# velocity:html-reporter

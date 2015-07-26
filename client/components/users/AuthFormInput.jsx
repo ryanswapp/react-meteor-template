@@ -2,7 +2,6 @@ C.AuthFormInput = React.createClass({
     propTypes: {
         hasError: React.PropTypes.bool,
         label: React.PropTypes.string,
-        iconClass: React.PropTypes.string,
         type: React.PropTypes.string,
         name: React.PropTypes.string
     },
@@ -14,8 +13,8 @@ C.AuthFormInput = React.createClass({
 
         return (
             <div className={ className }>
-                <label for={ this.props.name } className="control-label"></label>
-                <input type={ this.props.type } name={ this.props.name } placeholder={ this.props.label }/>
+                <label for={ this.props.name.toLowerCase() } className="control-label">{ this.props.name }</label>
+                <input type={ this.props.type } className="form-control" name={ this.props.name.toLowerCase() } placeholder={ this.props.label }/>
             </div>
         )
     }

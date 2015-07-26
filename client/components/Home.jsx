@@ -4,9 +4,9 @@ C.Home = React.createClass({
             <div className="jumbotron">
                 <div className="container">
                     <h1>React Meteor Template</h1>
-                    <p>This template is so sick</p>
+                    <p>I hope you enjoy :)</p>
                 </div>
             </div>
         )
     }
-})
+});
