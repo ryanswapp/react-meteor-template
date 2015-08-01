@@ -60,8 +60,8 @@ C.UserLogin = React.createClass({
 
                         <form onSubmit={this.onSubmit}>
                             <C.AuthErrors errors={this.state.errors} />
-                            <C.AuthFormInput hasError={!!this.state.errors.email} name="Email" type="text" label="Email" />
-                            <C.AuthFormInput hasError={!!this.state.errors.password} name="Password" type="password" label="Password" />
+                            <C.FormInput hasError={!!this.state.errors.email} name="Email" type="text" label="Email" />
+                            <C.FormInput hasError={!!this.state.errors.password} name="Password" type="password" label="Password" />
                             <input type="submit" className="btn btn-default"/>
                         </form>
                     </div>
