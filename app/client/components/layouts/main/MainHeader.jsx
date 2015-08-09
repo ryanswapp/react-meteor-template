@@ -1,4 +1,4 @@
-C.Header = React.createClass({
+C.MainHeader = React.createClass({
     mixins: [ReactMeteorData],
     getMeteorData() {
         return {
@@ -9,13 +9,17 @@ C.Header = React.createClass({
         Meteor.logout();
     },
     render() {
-        var loginButton;
-        var self = this;
+        let loginButton;
+        let { currentUser } = this.data;
 
-        if (self.data.currentUser) {
-            loginButton = <li><a href="#" onClick={this.handleLogout}>Logout</a></li>
+        if (currentUser) {
+            loginButton = (
+              <li><a href="#" onClick={this.handleLogout}>Logout</a></li>
+            )
         } else {
-            loginButton = <li><a href="/login">Login</a></li>
+            loginButton = (
+              <li><a href="/login">Login</a></li>
+            )
         }
 
         return (

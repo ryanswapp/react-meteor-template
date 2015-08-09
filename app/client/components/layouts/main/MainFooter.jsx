@@ -1,4 +1,4 @@
-C.Footer = React.createClass({
+C.MainFooter = React.createClass({
     render() {
         return (
             <div className="footer container">
@@ -11,4 +11,4 @@ C.Footer = React.createClass({
             </div>
         )
     }
-})
+});

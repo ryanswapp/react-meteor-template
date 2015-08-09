@@ -48,8 +48,14 @@ velocity:html-reporter
 
 ## Included Components
 
+MainLayout
+
+MainHeader
+
+MainFooter
+
 UserLogin
 
-AuthFormInput
+FormInput
 
 AuthErrors

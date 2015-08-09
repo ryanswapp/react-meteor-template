@@ -3,8 +3,8 @@ C.Home = React.createClass({
         return (
             <div className="jumbotron">
                 <div className="container">
-                    <h1>React Meteor Template</h1>
-                    <p>I hope you enjoy :)</p>
+                    <h1 className="text-center">React Meteor Template</h1>
+                    <p className="text-center">A starting point for React apps built on Meteor</p>
                 </div>
             </div>
         )
