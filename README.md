@@ -2,6 +2,10 @@
 
 This is a boilerplate template for a Meteor.js app that uses React.js as the view layer
 
+## NOTE
+
+The first time you run this app it will fail. This is because it is using the reywood:bootstrap3-sass package. If you restart the app after it crashes it will then work from that point on. Check out the "To use" section [here](https://atmospherejs.com/reywood/bootstrap3-sass) for more info.
+
 ## Install
 
 Run the following to get the bash file to work:
