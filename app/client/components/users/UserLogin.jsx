@@ -16,8 +16,6 @@ C.UserLogin = React.createClass({
     onSubmit(event) {
         event.preventDefault();
 
-        var self = this;
-
         var email = $(event.target).find("[name=email]").val();
         var password = $(event.target).find("[name=password]").val();
 
@@ -31,7 +29,7 @@ C.UserLogin = React.createClass({
             errors.password = "Password required"
         }
 
-        self.setState({
+        this.setState({
             errors: errors
         });
 
@@ -41,7 +39,7 @@ C.UserLogin = React.createClass({
 
         Meteor.loginWithPassword(email, password, (err) => {
             if (err) {
-                self.setState({
+                this.setState({
                     errors: {'none': err.reason}
                 });
 
